@@ -67,20 +67,21 @@ angular.module('deckrrApp')
         controller: 'LoginCtrl'
       })
 
-      .when('/chat', {
-        templateUrl: 'views/chat.html',
-        controller: 'ChatCtrl'
-      })
-
       .whenAuthenticated('/account', {
         templateUrl: 'views/account.html',
         controller: 'AccountCtrl'
       })
 
-      .when('/chat', {
-        templateUrl: 'views/chat.html',
-        controller: 'ChatCtrl'
+      .when('/play', {
+        templateUrl: 'views/play.html',
+        controller: 'PlayCtrl',
       })
+
+      .when('/deck/new', {
+        templateUrl: 'views/deck/new.html',
+        controller: 'DeckCtrl'
+      })
+
       .otherwise({redirectTo: '/'});
   }])
 
